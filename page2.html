@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman 2</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Form Input</h1>
+    <!-- Form -->
+    <form id="myForm">
+      <div class="form-group">
+        <label for="textField">Text Field</label>
+        <input type="text" class="form-control" id="textField">
+      </div>
+      <div class="form-group">
+        <label for="dateField">Date</label>
+        <input type="date" class="form-control" id="dateField">
+      </div>
+      <div class="form-group">
+        <label for="selectField">Dropdown</label>
+        <select class="form-control" id="selectField">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Radio Buttons</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radioOptions" id="radioOption1" value="option1">
+          <label class="form-check-label" for="radioOption1">Option 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="radioOptions" id="radioOption2" value="option2">
+          <label class="form-check-label" for="radioOption2">Option 2</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="textareaField">Text Area</label>
+        <textarea class="form-control" id="textareaField" rows="3"></textarea>
+      </div>
+      <!-- Button Submit -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- Tombol Kembali ke Halaman Utama -->
+    <a href="index.html" class="btn btn-secondary mt-3">Back to Index</a>
+  </div>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- JavaScript for Form Submission -->
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      var textFieldValue = document.getElementById("textField").value;
+      var dateFieldValue = document.getElementById("dateField").value;
+      var selectFieldValue = document.getElementById("selectField").value;
+      var radioOptions = document.getElementsByName("radioOptions");
+      var radioValue;
+      for (var i = 0; i < radioOptions.length; i++) {
+        if (radioOptions[i].checked) {
+          radioValue = radioOptions[i].value;
+          break;
+        }
+      }
+      var textAreaValue = document.getElementById("textareaField").value;
+      var message = "Text Field: " + textFieldValue + "\nDate: " + dateFieldValue + "\nDropdown: " + selectFieldValue + "\nRadio Button: " + radioValue + "\nText Area: " + textAreaValue;
+      alert(message);
+    });
+  </script>
+</body>
+</html>
