@@ -1,60 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halaman Utama</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    /* Gaya khusus untuk foto personel */
-    .personel-img {
-      max-width: 150px; /* Atur lebar maksimum untuk gambar personel */
-      margin-bottom: 10px; /* Beri jarak antara gambar */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Idol K-Pop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Media Lagu</h1>
-    <!-- Putar Lagu -->
-    <div class="mb-3">
-      <audio controls>
-        <source src="lagu.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+    <div class="album-container">
+        <div class="album-header">
+            <h1>Nama Album</h1>
+            <p>by Nama Idol K-Pop</p>
+        </div>
+
+        <div class="media-section">
+            <h2>Title Track: Lagu Utama</h2>
+            <audio controls>
+                <source src="path/to/your/title-track.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </div>
+
+        <div class="mv-section">
+            <h2>Music Video (MV)</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your-video-id" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="concept-photo-section">
+            <h2>Concept Photos</h2>
+            <img src="path/to/your/concept-photo1.jpg" alt="Concept Photo 1">
+            <img src="path/to/your/concept-photo2.jpg" alt="Concept Photo 2">
+            <img src="path/to/your/concept-photo3.jpg" alt="Concept Photo 3">
+        </div>
     </div>
-    <!-- Deskripsi Lagu -->
-    <p>Deskripsi lagu disini.</p>
-    <!-- Video Klip -->
-    <div class="mb-3">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <!-- Foto Album -->
-    <div class="mb-3">
-      <img src="album.jpg" class="img-fluid" alt="Album Cover">
-    </div>
-    <!-- Foto Personel -->
-    <div class="row">
-      <div class="col-md-3">
-        <img src="personel1.jpg" class="personel-img img-fluid" alt="Personel 1">
-        <p>Nama Personel 1</p>
-      </div>
-      <div class="col-md-3">
-        <img src="personel2.jpg" class="personel-img img-fluid" alt="Personel 2">
-        <p>Nama Personel 2</p>
-      </div>
-      <div class="col-md-3">
-        <img src="personel3.jpg" class="personel-img img-fluid" alt="Personel 3">
-        <p>Nama Personel 3</p>
-      </div>
-      <div class="col-md-3">
-        <img src="personel4.jpg" class="personel-img img-fluid" alt="Personel 4">
-        <p>Nama Personel 4</p>
-      </div>
-    </div>
-    <!-- Tombol Menuju Halaman 2 -->
-    <a href="page2.html" class="btn btn-primary">Halaman 2</a>
-  </div>
 </body>
 </html>
