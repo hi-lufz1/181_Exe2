@@ -3,47 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripleS - Album Info</title>
+    <title>TripleS - Assemble 24 Album Survey</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>TripleS - Album Info</h1>
+        <h1>TripleS - Assemble 24 Album Survey</h1>
     </header>
     <div class="container">
-        <form>
-            <label for="description">Description:</label><br>
-            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+        <form action="submit_survey.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
 
-            <label for="releaseDate">Release Date:</label><br>
-            <input type="date" id="releaseDate" name="releaseDate"><br><br>
+            <label for="survey_date">Survey Date:</label>
+            <input type="date" id="survey_date" name="survey_date" required>
 
-            <label for="genre">Genre:</label><br>
-            <select id="genre" name="genre">
-                <option value="pop">Pop</option>
-                <option value="rock">Rock</option>
-                <option value="hiphop">Hip Hop</option>
-                <option value="rnb">R&B</option>
-            </select><br><br>
+            <label for="album_rating">Album Rating:</label>
+            <select id="album_rating" name="album_rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">Excellent</option>
+                <option value="4">Very Good</option>
+                <option value="3">Good</option>
+                <option value="2">Fair</option>
+                <option value="1">Poor</option>
+            </select>
 
-            <label>Concept:</label><br>
-            <input type="radio" id="concept1" name="concept" value="cute">
-            <label for="concept1">Cute</label><br>
-            <input type="radio" id="concept2" name="concept" value="sexy">
-            <label for="concept2">Sexy</label><br>
-            <input type="radio" id="concept3" name="concept" value="edgy">
-            <label for="concept3">Edgy</label><br><br>
+            <label for="title_track_rating">Title Track Rating:</label><br>
+            <input type="radio" id="title_track_rating_excellent" name="title_track_rating" value="excellent" required>
+            <label for="title_track_rating_excellent">Excellent</label><br>
+            <input type="radio" id="title_track_rating_good" name="title_track_rating" value="good">
+            <label for="title_track_rating_good">Good</label><br>
+            <input type="radio" id="title_track_rating_average" name="title_track_rating" value="average">
+            <label for="title_track_rating_average">Average</label><br>
+            <input type="radio" id="title_track_rating_poor" name="title_track_rating" value="poor">
+            <label for="title_track_rating_poor">Poor</label><br>
 
-            <label for="producer">Producer:</label><br>
-            <input type="text" id="producer" name="producer"><br><br>
+            <label for="comments">Comments/Suggestions:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
 
-            <label for="label">Record Label:</label><br>
-            <input type="text" id="label" name="label"><br><br>
+            <label for="bonus_tracks">Favorite Tracks:</label><br>
+            <input type="checkbox" id="bonus_track_s" name="bonus_tracks[]" value="S">
+            <label for="bonus_track_s">“S” — 01:13</label><br>
+            <input type="checkbox" id="bonus_track_girls_never_die" name="bonus_tracks[]" value="Girls Never Die">
+            <label for="bonus_track_girls_never_die">Girls Never Die</label><br>
+            <input type="checkbox" id="bonus_track_heart_raider" name="bonus_tracks[]" value="Heart Raider">
+            <label for="bonus_track_heart_raider">가시권 (Heart Raider)</label><br>
+            <input type="checkbox" id="bonus_track_midnight_flower" name="bonus_tracks[]" value="Midnight Flower">
+            <label for="bonus_track_midnight_flower">Midnight Flower</label><br>
+            <input type="checkbox" id="bonus_track_white_soul_sneakers" name="bonus_tracks[]" value="White Soul Sneakers">
+            <label for="bonus_track_white_soul_sneakers">White Soul Sneakers</label><br>
+            <input type="checkbox" id="bonus_track_chiyu" name="bonus_tracks[]" value="Chiyu">
+            <label for="bonus_track_chiyu">치유 (Chiyu)</label><br>
+            <input type="checkbox" id="bonus_track_24" name="bonus_tracks[]" value="24">
+            <label for="bonus_track_24">24</label><br>
+            <input type="checkbox" id="bonus_track_beyond_the_beyond" name="bonus_tracks[]" value="Beyond the Beyond">
+            <label for="bonus_track_beyond_the_beyond">이면의 이면 (Beyond the Beyond)</label><br>
+            <input type="checkbox" id="bonus_track_non_scale" name="bonus_tracks[]" value="Non Scale">
+            <label for="bonus_track_non_scale">Non Scale</label><br>
+            <input type="checkbox" id="bonus_track_dimension" name="bonus_tracks[]" value="Dimension">
+            <label for="bonus_track_dimension">Dimension</label><br>
+  
+            <label for="comments">Comments/Suggestions:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
 
-            <label for="sales">Sales:</label><br>
-            <input type="text" id="sales" name="sales"><br><br>
-
-            <button type="submit" class="button">Submit</button>
+            <input type="submit" value="Submit">
         </form>
     </div>
     <footer>
