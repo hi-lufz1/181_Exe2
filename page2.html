@@ -21,29 +21,28 @@
             <label for="album_rating">Album Rating:</label>
             <select id="album_rating" name="album_rating" required>
                 <option value="">Select Rating</option>
-                <option value="5">Excellent</option>
-                <option value="4">Very Good</option>
+                <option value="4">Excellent</option>
                 <option value="3">Good</option>
-                <option value="2">Fair</option>
+                <option value="2">Average</option>
                 <option value="1">Poor</option>
             </select>
 
-            <label for="title_track_rating">Title Track Rating:</label><br>
+            <label for="title_track_rating">Title Track Rating:</label>
             <input type="radio" id="title_track_rating_excellent" name="title_track_rating" value="excellent" required>
-            <label for="title_track_rating_excellent">Excellent</label><br>
+            <label for="title_track_rating_excellent">Excellent</label>
             <input type="radio" id="title_track_rating_good" name="title_track_rating" value="good">
-            <label for="title_track_rating_good">Good</label><br>
+            <label for="title_track_rating_good">Good</label>
             <input type="radio" id="title_track_rating_average" name="title_track_rating" value="average">
-            <label for="title_track_rating_average">Average</label><br>
+            <label for="title_track_rating_average">Average</label>
             <input type="radio" id="title_track_rating_poor" name="title_track_rating" value="poor">
-            <label for="title_track_rating_poor">Poor</label><br>
+            <label for="title_track_rating_poor">Poor</label>
 
             <label for="comments">Comments/Suggestions:</label><br>
             <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
 
             <label for="bonus_tracks">Favorite Tracks:</label><br>
             <input type="checkbox" id="bonus_track_s" name="bonus_tracks[]" value="S">
-            <label for="bonus_track_s">“S” — 01:13</label><br>
+            <label for="bonus_track_s">S</label><br>
             <input type="checkbox" id="bonus_track_girls_never_die" name="bonus_tracks[]" value="Girls Never Die">
             <label for="bonus_track_girls_never_die">Girls Never Die</label><br>
             <input type="checkbox" id="bonus_track_heart_raider" name="bonus_tracks[]" value="Heart Raider">
@@ -63,11 +62,39 @@
             <input type="checkbox" id="bonus_track_dimension" name="bonus_tracks[]" value="Dimension">
             <label for="bonus_track_dimension">Dimension</label><br>
   
-            <label for="comments">Comments/Suggestions:</label><br>
-            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+            <label for="favorite_member">Favorite Member:</label>
+            <select id="favorite_member" name="favorite_member" required>
+                <option value="">Select Member</option>
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+                <option value="S4">S4</option>
+                <option value="S5">S5</option>
+                <option value="S6">S6</option>
+                <option value="S7">S7</option>
+                <option value="S8">S8</option>
+                <option value="S9">S9</option>
+                <option value="S10">S10</option>
+                <option value="S11">S11</option>
+                <option value="S12">S12</option>
+                <option value="S13">S13</option>
+                <option value="S14">S14</option>
+                <option value="S15">S15</option>
+                <option value="S16">S16</option>
+                <option value="S17">S17</option>
+                <option value="S18">S18</option>
+                <option value="S19">S19</option>
+                <option value="S20">S20</option>
+                <option value="S21">S21</option>
+                <option value="S22">S22</option>
+                <option value="S23">S23</option>
+                <option value="S24">S24</option>
+            </select>
 
-            <input type="submit" value="Submit">
+            
+           
         </form>
+        <button type="submit"class="button"onclick ="kirimData()">Submit</button>
     </div>
     <footer>
         <p>&copy; 2024 TripleS. All rights reserved.</p>
