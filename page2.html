@@ -1,79 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Halaman 2</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripleS - Album Info</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Form Input</h1>
-    <!-- Form -->
-    <form id="myForm">
-      <div class="form-group">
-        <label for="textField">Text Field</label>
-        <input type="text" class="form-control" id="textField">
-      </div>
-      <div class="form-group">
-        <label for="dateField">Date</label>
-        <input type="date" class="form-control" id="dateField">
-      </div>
-      <div class="form-group">
-        <label for="selectField">Dropdown</label>
-        <select class="form-control" id="selectField">
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Radio Buttons</label><br>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="radioOptions" id="radioOption1" value="option1">
-          <label class="form-check-label" for="radioOption1">Option 1</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="radioOptions" id="radioOption2" value="option2">
-          <label class="form-check-label" for="radioOption2">Option 2</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="textareaField">Text Area</label>
-        <textarea class="form-control" id="textareaField" rows="3"></textarea>
-      </div>
-      <!-- Button Submit -->
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    <!-- Tombol Kembali ke Halaman Utama -->
-    <a href="index.html" class="btn btn-secondary mt-3">Back to Index</a>
-  </div>
+    <header>
+        <h1>TripleS - Album Info</h1>
+    </header>
+    <div class="container">
+        <form>
+            <label for="albumName">Album Name:</label><br>
+            <input type="text" id="albumName" name="albumName"><br><br>
 
-  <!-- Bootstrap JS and jQuery -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <label for="releaseDate">Release Date:</label><br>
+            <input type="date" id="releaseDate" name="releaseDate"><br><br>
 
-  <!-- JavaScript for Form Submission -->
-  <script>
-    document.getElementById("myForm").addEventListener("submit", function(event){
-      event.preventDefault();
-      var textFieldValue = document.getElementById("textField").value;
-      var dateFieldValue = document.getElementById("dateField").value;
-      var selectFieldValue = document.getElementById("selectField").value;
-      var radioOptions = document.getElementsByName("radioOptions");
-      var radioValue;
-      for (var i = 0; i < radioOptions.length; i++) {
-        if (radioOptions[i].checked) {
-          radioValue = radioOptions[i].value;
-          break;
-        }
-      }
-      var textAreaValue = document.getElementById("textareaField").value;
-      var message = "Text Field: " + textFieldValue + "\nDate: " + dateFieldValue + "\nDropdown: " + selectFieldValue + "\nRadio Button: " + radioValue + "\nText Area: " + textAreaValue;
-      alert(message);
-    });
-  </script>
+            <label for="genre">Genre:</label><br>
+            <select id="genre" name="genre">
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hiphop">Hip Hop</option>
+                <option value="rnb">R&B</option>
+            </select><br><br>
+
+            <label>Concept:</label><br>
+            <input type="radio" id="concept1" name="concept" value="cute">
+            <label for="concept1">Cute</label><br>
+            <input type="radio" id="concept2" name="concept" value="sexy">
+            <label for="concept2">Sexy</label><br>
+            <input type="radio" id="concept3" name="concept" value="edgy">
+            <label for="concept3">Edgy</label><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 TripleS. All rights reserved.</p>
+    </footer>
 </body>
 </html>
