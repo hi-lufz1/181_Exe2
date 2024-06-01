@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TripleS - Assemble 24 Album Survey</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
-        <h1>TripleS - Assemble 24 Album Survey</h1>
+        <h1>TripleS - &lt;ASSEMBLE24&gt; Album Survey</h1>
     </header>
     <div class="container">
-        <form action="submit_survey.php" method="POST">
+        <form id="surveyForm">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -21,10 +22,10 @@
             <label for="album_rating">Album Rating:</label>
             <select id="album_rating" name="album_rating" required>
                 <option value="">Select Rating</option>
-                <option value="4">Excellent</option>
-                <option value="3">Good</option>
-                <option value="2">Average</option>
-                <option value="1">Poor</option>
+                <option value="Excellent">Excellent</option>
+                <option value="Good">Good</option>
+                <option value="Average">Average</option>
+                <option value="Poor">Poor</option>
             </select>
 
             <label for="title_track_rating">Title Track Rating:</label>
@@ -91,13 +92,13 @@
                 <option value="S24">S24</option>
             </select>
 
-            
-           
+            <button type="button" class="button" onclick="kirimData()">Submit</button>
         </form>
-        <button type="submit"class="button"onclick ="kirimData()">Submit</button>
     </div>
     <footer>
-        <p>&copy; 2024 TripleS. All rights reserved.</p>
+        <p>&copy; 2024 ltiifzi. All rights reserved.</p>
     </footer>
+    <script src="script.js" defer></script>
 </body>
+
 </html>
