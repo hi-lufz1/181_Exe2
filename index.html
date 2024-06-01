@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halaman Utama</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Gaya khusus untuk foto personel */
+    .personel-img {
+      max-width: 150px; /* Atur lebar maksimum untuk gambar personel */
+      margin-bottom: 10px; /* Beri jarak antara gambar */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Media Lagu</h1>
+    <!-- Putar Lagu -->
+    <div class="mb-3">
+      <audio controls>
+        <source src="lagu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <!-- Deskripsi Lagu -->
+    <p>Deskripsi lagu disini.</p>
+    <!-- Video Klip -->
+    <div class="mb-3">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- Foto Album -->
+    <div class="mb-3">
+      <img src="album.jpg" class="img-fluid" alt="Album Cover">
+    </div>
+    <!-- Foto Personel -->
+    <div class="row">
+      <div class="col-md-3">
+        <img src="personel1.jpg" class="personel-img img-fluid" alt="Personel 1">
+        <p>Nama Personel 1</p>
+      </div>
+      <div class="col-md-3">
+        <img src="personel2.jpg" class="personel-img img-fluid" alt="Personel 2">
+        <p>Nama Personel 2</p>
+      </div>
+      <div class="col-md-3">
+        <img src="personel3.jpg" class="personel-img img-fluid" alt="Personel 3">
+        <p>Nama Personel 3</p>
+      </div>
+      <div class="col-md-3">
+        <img src="personel4.jpg" class="personel-img img-fluid" alt="Personel 4">
+        <p>Nama Personel 4</p>
+      </div>
+    </div>
+    <!-- Tombol Menuju Halaman 2 -->
+    <a href="page2.html" class="btn btn-primary">Halaman 2</a>
+  </div>
+</body>
+</html>
